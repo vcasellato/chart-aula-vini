@@ -3,13 +3,13 @@ entries:
   giropops-senhas:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2025-03-05T10:00:02.211183206Z"
+    created: "2025-03-05T10:04:11.687296352Z"
     description: gerador de senhas
     digest: 2e68ab30f26bd250b9823ebcfb8424ccd2eb0750de989082abcdd504e3e23fed
     name: giropops-senhas
     sources:
     - https://github.com/badtuxx/giropops-senhas
     urls:
-    - https://github.com/vcasellato/chart-aula-vini/giropops-senhas-0.1.0.tgz
+    - https://vcasellato.github.io/chart-aula-vini/giropops-senhas-0.1.0.tgz
     version: 0.1.0
-generated: "2025-03-05T10:00:02.209381883Z"
+generated: "2025-03-05T10:04:11.686530761Z"
