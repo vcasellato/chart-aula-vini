@@ -1,0 +1,22 @@
+{{-  range $component, $config := .Values.services }}
+  {{- range $port, $port := $config.ports }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ $component }}-{{ $port.name }}
+  labels:
+    {{- include "app.labels" $config | nindent 4 }}
+spec:
+  type: {{ $port.serviceType }}
+  ports:
+  - name: {{ $port.name }}
+    port: {{ $port.port }}
+{{- if eq .serviceType "NodePort" }}
+    nodePort: {{ $port.nodePort }}
+{{- end }}
+    targetPort: {{ $port.targetPort }}
+  selector :
+    app : {{ $config.labels.app }}
+---
+  {{- end }}
+{{- end }}
